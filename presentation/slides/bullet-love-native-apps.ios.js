@@ -1,94 +1,83 @@
-import React, { createClass, View, Image, Text, ListView, Animated, Easing } from 'react-native'
+import React, { createClass, View, Image, Text, Animated, Easing, PropTypes, StyleSheet } from 'react-native'
 import extend from '../../src/utils/extend'
-import stepped from '../../src/utils/stepped';
+//import stepped from '../../src/utils/stepped';
 import Lang from '../language/bullet-love-native-apps.en'
 import BaseComponent from './common/bullet-love-native-apps'
+import List from '../../src/components/list'
+import Heading from '../../src/components/heading'
 
 const Component = createClass(extend(BaseComponent, {
+    //getInitialState(){
+    //    return {
+    //        opacity: new Animated.Value(0),
+    //        marginRight: new Animated.Value(-50)
+    //    }
+    //},
+    //
+    //componentWillReceiveProps(props){
+    //    if (props.step < this.props.step) {
+    //        this._previousStepAnimation()
+    //    } else if (props.step > this.props.step) {
+    //        this._nextStepAnimation()
+    //    }
+    //},
+    //
+    //_nextStepAnimation(){
+    //    Animated.parallel([
+    //        Animated.timing(this.state.opacity, {
+    //            toValue: 1
+    //        }),
+    //        Animated.timing(this.state.marginRight, {
+    //            toValue: 0
+    //        })
+    //    ]).start()
+    //},
+    //
+    //_previousStepAnimation(){
+    //    Animated.parallel([
+    //        Animated.timing(this.state.opacity, {
+    //            toValue: 0,
+    //            duration: 0
+    //        }),
+    //        Animated.timing(this.state.marginRight, {
+    //            toValue: -50,
+    //            duration: 0
+    //        })
+    //    ]).start()
+    //},
     //
     //renderImage() {
     //    return (
-    //        <VelocityComponent
-    //            animation={{opacity: this.props.step > 0 ? 1 : 0,marginRight: this.props.step > 0 ? '0' : '-50'}}
-    //            duration={500}>
-    //            <Image src={this.props.image} width="100%"/>
-    //        </VelocityComponent>
+    //        <Animated.Image
+    //            source={this.props.image}
+    //            style={{flex: 1, width:100, height: 100, opacity: this.state.opacity, marginRight: this.state.marginRight}}/>
+    //
     //    );
     //},
 
-    getInitialState(){
-        return {
-            opacity: new Animated.Value(0),
-            marginRight: new Animated.Value(-50)
-        }
-    },
-
-    componentWillUnMount(){
-console.log('unmount')
-    },
-
-
-    componentWillReceiveProps(props){
-        if (props.step < this.props.step) {
-            this._previousStepAnimation()
-        } else if (props.step > this.props.step) {
-            this._nextStepAnimation()
-        }
-    },
-
-    _nextStepAnimation(){
-        Animated.parallel([
-            Animated.timing(this.state.opacity, {
-                toValue: 1
-            }),
-            Animated.timing(this.state.marginRight, {
-                toValue: 0
-            })
-        ]).start()
-    },
-
-    _previousStepAnimation(){
-        console.log('previous step');
-        Animated.parallel([
-            Animated.timing(this.state.opacity, {
-                toValue: 0
-            }),
-            Animated.timing(this.state.marginRight, {
-                toValue: -50
-            })
-        ]).start()
-    },
-
-    renderImage() {
-        console.log('render', this.state.opacity);
-        return (
-            <Animated.Image
-                source={this.props.image}
-                style={{flex: 1, width:100, height: 100, opacity: this.state.opacity, marginRight: this.state.marginRight}}/>
-
-        );
+    contextTypes: {
+        styles: PropTypes.object
     },
 
     renderBullets() {
-        const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-        const renderRow = (data) => {
-            return <Text>{data}</Text>
-        };
+        const styles = StyleSheet.create(this.context.styles.slides.bulletLoveNativeApps)
 
         return (
-            <ListView dataSource={ds.cloneWithRows(Lang.PROPS.map((item)=>{return ` - ${item}`}))}
-                      renderRow={renderRow}/>
+            <List dataSource={Lang.PROPS.map((item)=>{return ` - ${item}`})} style={styles.list}/>
         );
     },
 
     render() {
+        const common = StyleSheet.create(this.context.styles.slides.common)
+        const styles = StyleSheet.create(this.context.styles.slides.bulletLoveNativeApps)
         return (
-            <View>
+            <View style={[common.content, styles.content]}>
+                <Heading size={3} style={styles.header}>{Lang.HEADER}</Heading>
                 <View>{this.renderBullets()}</View>
-                <View>{this.renderImage()}</View>
             </View>
         )
     }
 }))
 
-export default stepped(React, 2)(Component)
+//export default stepped(React, 2)(Component)
+export default Component

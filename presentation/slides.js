@@ -51,22 +51,26 @@ export default [
             image: images.nativeApps
         }
     },
-    //{
-    //    component: Slides.BuildingNativeAppsIsHard,
-    //    slideProps: {
-    //        bgImage: images.buildingNativeApps.replace('/', ''),
-    //        bgDarken: 0.7
-    //    }
-    //},
-    //{
-    //    component: Slides.BulletHardNativeApps,
-    //    slideProps: {
-    //        bgColor: 'light'
-    //    },
-    //    props: {
-    //        image: images.phones.replace('/', '')
-    //    }
-    //},
+    {
+        component: Slides.BuildingNativeAppsIsHard,
+        slideProps: {
+            bgImage: images.buildingNativeApps,
+            bgDarken: 0.7
+        },
+        props: {
+            bgImage: images.buildingNativeApps,
+            bgDarken: 0.7
+        }
+    },
+    {
+        component: Slides.BulletHardNativeApps,
+        slideProps: {
+            bgColor: 'light'
+        },
+        props: {
+            image: images.phones
+        }
+    },
     //{
     //    component: Slides.WebSolvesThisProblem,
     //    slideProps: {

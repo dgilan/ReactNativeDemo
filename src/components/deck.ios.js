@@ -41,7 +41,6 @@ const Deck = createClass(extend(BaseComponent, {
     },
 
     onMove(e){
-        console.log(this._x, e.nativeEvent.locationX);
         if (this._blockedSlide) {
             return false;
         }
@@ -72,8 +71,11 @@ const Deck = createClass(extend(BaseComponent, {
 
     render() {
 
+        const styles = StyleSheet.create(this.context.styles.global.body);
+
+
         return (
-            <View onStartShouldSetResponderCapture={this.onTouchStart}>
+            <View onStartShouldSetResponderCapture={this.onTouchStart} style={styles.view}>
                 <Swiper onMomentumScrollEnd={this.onTouchEnd} loop={false}>
                     {this.props.children}
                 </Swiper>

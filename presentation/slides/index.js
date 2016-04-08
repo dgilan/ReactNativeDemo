@@ -1,15 +1,17 @@
 import Intro from  './intro'
 import WhyDoWeLoveNativeApps from './why-do-we-love-native-apps'
 import BulletLoveNativeApps from './bullet-love-native-apps'
+import BuildingNativeAppsIsHard from './builging-native-apps-is-hard'
+import BulletHardNativeApps from './bullet-hard-native-apps'
 
 export default {
     Intro,
     WhyDoWeLoveNativeApps,
-    BulletLoveNativeApps
+    BulletLoveNativeApps,
+    BuildingNativeAppsIsHard,
+    BulletHardNativeApps
 }
 
-//export BuildingNativeAppsIsHard from './builging-native-apps-is-hard.jsx';
-//export BulletHardNativeApps from './bullet-hard-native-apps.jsx';
 //export WebSolvesThisProblem from './web-solves-this-problem.jsx';
 //export HowWebSolvedTheProblems from './how-web-solved-problems.jsx';
 //export WebBrowser from './web-browser.jsx';

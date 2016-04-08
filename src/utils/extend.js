@@ -1,6 +1,6 @@
 import extend from 'lodash.assign'
 
-export default function (component, props) {
+const extendComponent = function (component, props) {
 
     const newProps = extend({}, props)
 
@@ -14,7 +14,7 @@ export default function (component, props) {
     if (typeof props.getInitialState === 'function' && typeof component.getInitialState === 'function') {
         //need merge results
         newProps.getInitialState = ()=> {
-            return extend({}, component.getInitialState(), props.getInitialState())
+            return extend({}, component.getInitialState.call(this), props.getInitialState.call(this))
         }
     }
 
@@ -27,4 +27,15 @@ export default function (component, props) {
     }
 
     return extend({}, component, newProps)
+}
+
+export default function (...args) {
+
+    let result = args[0]
+
+    for (let i = 0; i <= args.length - 2; i++) {
+        result = extendComponent(result, args[i + 1])
+    }
+
+    return result
 }

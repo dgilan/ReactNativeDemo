@@ -1,35 +1,33 @@
-import React from 'react';
-import { Heading } from '../../src/spectacle';
-import stepped from '../stepped';
-import { VelocityComponent } from 'velocity-react';
+import React, { createClass, PropTypes } from 'react'
+import { VelocityComponent } from 'velocity-react'
+import { Row, Col } from 'elemental'
 
-@stepped(2)
-export default class BuildingNativeAppsIsHard extends React.Component {
+import { Heading, Image, List, ListItem } from '../../src/spectacle'
+import stepped from '../../src/utils/stepped'
+import extend from '../../src/utils/extend'
+import Lang from '../language/builging-native-apps-is-hard'
+import BaseComponent from './common/builging-native-apps-is-hard'
 
-  static propTypes = {
-    step: React.PropTypes.number.isRequired,
-    onUpdateStep: React.PropTypes.func.isRequired,
-    image: React.PropTypes.string.isRequired
-  };
+const Component = createClass(extend(BaseComponent, {
 
-  render() {
-    const { step } = this.props;
+    render() {
+        const { step } = this.props;
 
-    return (
-      <div>
-        <Heading size={2} textColor='primary' style={{ marginTop: '-100px'}}>Ho...</Heading>
-        <VelocityComponent
-          animation={{
-            opacity: step > 0 ? 1 : 0,
-            marginBottom: step > 0 ? '0' : '-100'
-          }}
-          duration={500}>
-          <Heading size={2} textColor='primary'>
-            ...cоздание нативных приложений это сложно
-          </Heading>
-        </VelocityComponent>
-      </div>
-    );
-  }
+        return (
+            <div>
+                <Heading size={2} textColor='primary' style={{ marginTop: '-100px'}}>{Lang.HEADER}</Heading>
+                <VelocityComponent
+                    animation={{opacity: step > 0 ? 1 : 0,marginBottom: step > 0 ? '0' : '-100'}}
+                    duration={500}>
+                    <Heading size={2} textColor='primary'>
+                        {Lang.DESCRIPTION}
+                    </Heading>
+                </VelocityComponent>
+            </div>
+        );
+    }
 
-}
+}))
+
+export default stepped(React, 2)(Component)
+

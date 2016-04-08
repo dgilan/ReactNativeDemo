@@ -3,10 +3,8 @@ import PropTypes from 'react/lib/ReactPropTypes'
 export default {
     displayName: 'Slide',
 
-    getDefaultProps() {
-        return {
-            logo: true
-        };
+    contextTypes: {
+        styles: PropTypes.object
     },
 
     propTypes: {

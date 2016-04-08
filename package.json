@@ -41,6 +41,7 @@
     "react-hot-loader": "1.2.7",
     "react-native": "0.22.2",
     "react-native-clone-referenced-element": "^1.0.0",
+    "react-native-linear-gradient": "^1.5.3",
     "react-native-swiper": "^1.4.3",
     "react-router": "1.0.0-beta2",
     "react-tween-state": "0.0.5",

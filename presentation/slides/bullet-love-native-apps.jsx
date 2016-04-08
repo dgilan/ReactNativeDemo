@@ -1,4 +1,4 @@
-import React, { createClass } from 'react';
+import React, { createClass, PropTypes } from 'react';
 import { Row, Col } from 'elemental';
 import { Heading, Image, List, ListItem } from '../../src/spectacle';
 import { VelocityComponent } from 'velocity-react';
@@ -8,6 +8,10 @@ import Lang from '../language/bullet-love-native-apps.en'
 import BaseComponent from './common/bullet-love-native-apps'
 
 const Component = createClass(extend(BaseComponent, {
+    propTypes: {
+        step: PropTypes.number.isRequired,
+        onUpdateStep: PropTypes.func.isRequired,
+    },
 
     renderImage() {
         return (

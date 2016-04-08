@@ -19,10 +19,7 @@ const Slide = React.createClass(extend(BaseComponent, {
     },
 
     contextTypes: {
-        styles: React.PropTypes.object,
-        export: React.PropTypes.bool,
-        print: React.PropTypes.bool,
-        overview: React.PropTypes.bool
+        styles: React.PropTypes.object
     },
 
     getDefaultProps() {
@@ -63,28 +60,16 @@ const Slide = React.createClass(extend(BaseComponent, {
     },
 
     render() {
-        const printStyles = this.context.print ? {
-            backgroundColor: "white",
-            backgroundImage: "none"
-        } : {};
-        const overViewStyles = {
-            inner: {
-                flexDirection: "column"
-            },
-            content: {
-                width: "100%"
-            }
-        };
         const styles = {
             outer: {
-                position: this.context.export ? "relative" : "absolute",
+                position: "absolute",
                 top: 0,
                 left: 0,
                 width: "100%",
                 height: "100%",
                 display: "flex",
-                backgroundColor: this.context.styles.global.body.background ?
-                    this.context.styles.global.body.background : ""
+                backgroundColor: this.context.styles.global.body.view.backgroundColor ?
+                    this.context.styles.global.body.view.backgroundColor : ""
             },
             inner: {
                 display: "flex",
@@ -109,12 +94,11 @@ const Slide = React.createClass(extend(BaseComponent, {
           styles.outer,
           this.getStyles(),
           this.getTransitionStyles(),
-          printStyles,
           this.props.presenterStyle]}>
-                <div style={[styles.inner, this.context.overview && overViewStyles.inner]}>
+                <div style={[styles.inner]}>
                     <div ref="content"
                          className="spectacle-content"
-                         style={[styles.content, this.context.styles.components.content, this.context.overview && overViewStyles.content]}>
+                         style={[styles.content, this.context.styles.components.content]}>
                         {this.props.children}
                     </div>
                 </div>

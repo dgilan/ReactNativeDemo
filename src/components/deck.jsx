@@ -195,7 +195,7 @@ const Deck = createClass(extend(BaseComponent, {
 
     render() {
         const globals = this.context.export ? {
-            body: assign(this.context.styles.global.body, {
+            body: assign(this.context.styles.global.body.view, this.context.styles.global.body.text, {
                 minWidth: 1100,
                 minHeight: 850,
                 overflow: "auto"
@@ -204,7 +204,6 @@ const Deck = createClass(extend(BaseComponent, {
 
         const styles = {
             deck: {
-                backgroundColor: this.context.presenter || this.context.overview ? "black" : "",
                 position: "absolute",
                 top: 0,
                 left: 0,

@@ -1,30 +1,22 @@
-import React, { AppRegistry, Component, StyleSheet, Text, View } from 'react-native'
+import React, { AppRegistry, Component, StyleSheet, Text, View, StatusBar } from 'react-native'
 
 import { extend } from 'lodash'
 
-import theme from './themes/example/index'
+import context from './src/utils/context'
 
-import Deck from './presentation/deck';
+import config from './presentation/config'
 
-const styles = StyleSheet.create(theme)
+import Deck from './presentation/deck'
 
 class Demo extends Component {
-    //render() {
-    //    return (
-    //        <View style={styles.container}>
-    //            <Text style={styles.welcome}>
-    //                Welcome to React Native! Uhu!
-    //            </Text>
-    //            <Text style={styles.instructions}>
-    //                To get started, edit index.ios.js
-    //            </Text>
-    //            <Text style={styles.instructions}>
-    //                Press Cmd+R to reload,{'\n'}
-    //                Cmd+D or shake for dev menu
-    //            </Text>
-    //        </View>
-    //    );
-    //}
+    componentWillMount() {
+        StatusBar.setHidden(true)
+    }
+
+    componentWillUnmount() {
+        StatusBar.setHidden(false)
+    }
+
     render() {
         return (
             <Deck />
@@ -32,5 +24,6 @@ class Demo extends Component {
     }
 }
 
+Demo = context(React, Demo, {styles: config.theme.default});
 
 AppRegistry.registerComponent('Demo', () => Demo);
