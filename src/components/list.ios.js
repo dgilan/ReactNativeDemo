@@ -21,7 +21,7 @@ const List = createClass(extend(BaseComponent, ListBaseComponent, {
         return (
             <ListView dataSource={ds.cloneWithRows(this.props.dataSource)}
                       renderRow={renderRow}
-                      style={styles.list}/>
+                      style={[styles.list, this.props.style]}/>
         );
     },
 
@@ -33,7 +33,7 @@ const List = createClass(extend(BaseComponent, ListBaseComponent, {
         return (
             <ListView dataSource={ds.cloneWithRows(this.props.children)}
                       renderRow={renderRow}
-                      style={styles.list}/>
+                      style={[styles.list, this.props.style]}/>
         )
     },
 

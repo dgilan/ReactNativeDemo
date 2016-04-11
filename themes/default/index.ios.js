@@ -3,6 +3,7 @@ import webTheme from './index.js'
 import assign from 'lodash.assign'
 import colors from './colors'
 import fonts from './fonts'
+import { Dimensions } from 'react-native'
 
 export default assign({}, webTheme, {
     global: {
@@ -71,9 +72,9 @@ export default assign({}, webTheme, {
             },
             h4: {
                 color: 'black',
-                //fontSize: '3.82em',
+                fontSize: 32,
                 fontFamily: fonts.segoe,
-                lineHeight: 1,
+                lineHeight: 32,
                 fontWeight: '300',
                 //margin: '0.5em auto'
             },
@@ -168,7 +169,106 @@ export default assign({}, webTheme, {
                 textAlign: 'center',
                 marginBottom: 50
             },
+        },
+
+        webSolvesThisProblem: {
+            header: {
+                color: colors.light,
+                textAlign: 'center'
+            }
+        },
+
+        howWebSolvedProblems: {
+            half: {
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: Dimensions.get('window').height / 2
+            },
+            listItem: {
+                color: colors.light,
+                textAlign: 'center',
+                fontWeight: '700'
+            },
+            header: {
+                color: colors.darkPrimary,
+                textAlign: 'center',
+                marginTop: 50,
+                marginBottom: 20
+            },
+            lightHeader: {
+                marginBottom: 0,
+                color: colors.light
+            }
+        },
+
+        webBrowser: {
+            root: {
+                flexDirection: 'row'
+            },
+            quote: {
+                color: colors.darkPrimary,
+                fontSize: 80,
+                lineHeight: 80
+            },
+            header: {
+                fontSize: 28,
+                lineHeight: 26,
+                color: colors.darkPrimary,
+                fontWeight: '700'
+            }
+        },
+        userExperienceOrDeveloperVelocity: {
+            root: {
+                marginTop: 0,
+                marginBottom: 0
+                //height: Dimensions.get('window').height,
+            },
+            choice: {
+                alignItems: 'center',
+                justifyContent: 'center'
+            },
+            or: {
+                flex: 1
+            },
+            header: {
+                color: colors.light,
+                fontWeight: 'bold',
+                fontSize: 70,
+                lineHeight: 70
+            },
+            title: {
+                color: colors.light
+            },
+            image: {
+                marginTop: 10,
+                marginBottom: 10
+            }
+        },
+        bothIsImportant: {
+            header: {
+                color: colors.light,
+                lineHeight: 40
+            }
+        },
+        countExample: {
+            header: {
+                color: colors.darkPrimary,
+                textAlign: 'center'
+            },
+            button: {
+                backgroundColor: colors.primaryDarker,
+                paddingLeft: 20,
+                paddingRight: 20,
+                paddingTop: 10,
+                paddingBottom: 10
+            },
+            label: {
+                color: colors.light,
+                fontSize: 50,
+                lineHeight: 50,
+                fontWeight: 'bold',
+                fontFamily: fonts.segoe
+            }
         }
     }
-
 })

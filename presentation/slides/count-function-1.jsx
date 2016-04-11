@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'elemental';
 import { Image } from '../../src/spectacle';
-import stepped from '../stepped';
+import stepped from '../../src/utils/stepped';
 
 const images = [
   require('../images/ui-f-count.jpg'),
@@ -12,7 +12,7 @@ const images = [
   require('../images/ui-f-count-6.jpg')
 ];
 
-@stepped(6)
+@stepped(React, 6)
 export default class CountFunction1 extends React.Component {
 
   static propTypes = {

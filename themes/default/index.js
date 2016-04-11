@@ -1,7 +1,7 @@
-import colors from './colors'
-import fonts from './fonts'
+const colors = require('./colors')
+const fonts = require('./fonts')
 
-export default {
+module.exports = {
     colors: colors,
     fonts: fonts,
     global: {

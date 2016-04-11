@@ -12,6 +12,7 @@ const images = {
     phones: require('./images/ios-android.png'),
     webHero: require('./images/web-superhero.png'),
     splitBackground: require('./images/split-background.png'),
+    splitBackgroundHorizontal: require('./images/split-background-horizontal.png'),
     reactNativeBackground: require('./images/react-native-background.jpg'),
     htmlCssJS: require('./images/html-js-css.png')
 }
@@ -31,7 +32,7 @@ export default [
             logo: images.logo
         }
     },
-     //Why do we love native apps
+    // //Why do we love native apps
     {
         component: Slides.WhyDoWeLoveNativeApps,
         slideProps: {
@@ -41,7 +42,7 @@ export default [
             like: images.like
         }
     },
-    //// Native Apps Bullet
+    // Native Apps Bullet
     {
         component: Slides.BulletLoveNativeApps,
         slideProps: {
@@ -56,10 +57,6 @@ export default [
         slideProps: {
             bgImage: images.buildingNativeApps,
             bgDarken: 0.7
-        },
-        props: {
-            bgImage: images.buildingNativeApps,
-            bgDarken: 0.7
         }
     },
     {
@@ -71,65 +68,66 @@ export default [
             image: images.phones
         }
     },
-    //{
-    //    component: Slides.WebSolvesThisProblem,
-    //    slideProps: {
-    //        bgColor: 'darkPrimary'
-    //    },
-    //    props: {
-    //        image: images.webHero.replace('/', '')
-    //    }
-    //},
-    //{
-    //    component: Slides.HowWebSolvedTheProblems,
-    //    slideProps: {
-    //        bgImage: images.splitBackground.replace('/', '')
-    //    },
-    //    props: {
-    //        image: images.htmlCssJS.replace('/', '')
-    //    }
-    //},
-    //{
-    //    component: Slides.WebBrowser,
-    //    slideProps: {
-    //        bgColor: 'light'
-    //    }
-    //},
-    //{
-    //    component: Slides.UserExperinceOrDeveloperVelocity,
-    //    slideProps: {
-    //        bgColor: 'darkPrimary'
-    //    }
-    //},
-    //{
-    //    component: Slides.BothAreImportant,
-    //    slideProps: {
-    //        bgColor: 'darkPrimary'
-    //    }
-    //},
-    //{
-    //    slideProps: {
-    //        bgImage: images.reactNativeBackground.replace('/', '')
-    //    }
-    //},
-    //{
-    //    component: Slides.ReactJSFramework,
-    //    slideProps: {
-    //        bgColor: 'primary'
-    //    }
-    //},
-    //{
-    //    component: Slides.CountExample,
-    //    slideProps: {
-    //        bgColor: 'light'
-    //    }
-    //},
-    //{
-    //    component: Slides.CountFunction1,
-    //    slideProps: {
-    //        bgColor: '#F9F6ED'
-    //    }
-    //},
+    {
+        component: Slides.WebSolvesThisProblem,
+        slideProps: {
+            bgColor: 'darkPrimary'
+        },
+        props: {
+            image: images.webHero
+        }
+    },
+    {
+        component: Slides.HowWebSolvedTheProblems,
+        slideProps: {
+            bgImage: images.splitBackground,
+            bgImageIos: images.splitBackgroundHorizontal
+        },
+        props: {
+            image: images.htmlCssJS
+        }
+    },
+    {
+        component: Slides.WebBrowser,
+        slideProps: {
+            bgColor: 'light'
+        }
+    },
+    {
+        component: Slides.UserExperinceOrDeveloperVelocity,
+        slideProps: {
+            bgColor: 'darkPrimary'
+        }
+    },
+    {
+        component: Slides.BothAreImportant,
+        slideProps: {
+            bgColor: 'darkPrimary'
+        }
+    },
+    {
+        slideProps: {
+            bgImage: images.reactNativeBackground
+        }
+    },
+    {
+        component: Slides.ReactJSFramework,
+        slideProps: {
+            bgColor: 'primary'
+        }
+    },
+    {
+        component: Slides.CountExample,
+        slideProps: {
+            bgColor: 'light'
+        }
+    },
+    {
+        component: Slides.CountFunction1,
+        slideProps: {
+            bgColor: '#F9F6ED'
+        }
+    },
     //{
     //    component: Slides.ReactIsAbstract,
     //    slideProps: {

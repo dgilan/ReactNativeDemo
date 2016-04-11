@@ -14,7 +14,7 @@ export default class extends Component {
                     </Slide>
                 );
             }
-            return <View {...slide.slideProps} />;
+            return <Slide {...slide.slideProps}  key={index}/>;
         });
     }
 

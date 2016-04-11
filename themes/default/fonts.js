@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     primary: 'Source Sans Pro',
     secondary: 'Open Sans Condensed',
     tertiary: 'monospace',
