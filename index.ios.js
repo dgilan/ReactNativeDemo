@@ -26,4 +26,4 @@ class Demo extends Component {
 
 Demo = context(React, Demo, {styles: config.theme.default});
 
-AppRegistry.registerComponent('Demo', () => Demo);
+AppRegistry.registerComponent('Demo2', () => Demo);

@@ -31,16 +31,8 @@
    * on the same Wi-Fi network.
    */
 
-//   jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios&dev=true"];
-//  jsCodeLocation = [NSURL URLWithString:@"http://192.168.154.65:8081/index.ios.bundle?platform=ios&dev=true"];
-  for (NSString* family in [UIFont familyNames])
-  {
-    NSLog(@"%@", family);
-    for (NSString* name in [UIFont fontNamesForFamilyName: family])
-    {
-      NSLog(@" %@", name);
-    }
-  }
+  jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios&dev=true"];
+
   /**
    * OPTION 2
    * Load from pre-bundled file on disk. The static bundle is automatically
@@ -49,10 +41,23 @@
    * simulator in the "Release" build configuration.
    */
 
-   jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+//   jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+  
+  
+  /**
+   * Show all fonts
+   */
+  for (NSString* family in [UIFont familyNames])
+  {
+    NSLog(@"%@", family);
+    for (NSString* name in [UIFont fontNamesForFamilyName: family])
+    {
+      NSLog(@" %@", name);
+    }
+  }
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
-                                                      moduleName:@"Demo"
+                                                      moduleName:@"Demo2"
                                                initialProperties:nil
                                                    launchOptions:launchOptions];
 
