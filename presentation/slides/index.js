@@ -11,6 +11,16 @@ import BothAreImportant from './both-is-important'
 import ReactJSFramework from './react-js-framework'
 import CountExample from './count-example'
 import CountFunction1 from './count-function-1'
+import ReactIsAbstract from './react-is-abstract'
+import ReactIsAbstract2 from './react-is-abstract-2'
+import NotWriteOnce from './not-write-once'
+import LearnOnce from './learn-once'
+import Tags from './tags'
+import ReactStyles from './react-styles'
+import TwoWaysToDiffer from './two-ways-to-differ'
+import ReactBenefits from './react-benifits'
+import FacebookAdsManager from './facebook-ads-manager'
+import FinalSlide from './final-slide'
 
 
 export default {
@@ -26,17 +36,17 @@ export default {
     BothAreImportant,
     ReactJSFramework,
     CountExample,
-    CountFunction1
+    CountFunction1,
+    ReactIsAbstract,
+    ReactIsAbstract2,
+    NotWriteOnce,
+    LearnOnce,
+    Tags,
+    ReactStyles,
+    TwoWaysToDiffer,
+    ReactBenefits,
+    FacebookAdsManager,
+    FinalSlide
 }
 
-//export ReactIsAbstract from './react-is-abstract.jsx';
-//export ReactIsAbstract2 from './react-is-abstract-2.jsx';
-//export NotWriteOnce from './not-write-once.jsx';
-//export LearnOnce from './learn-once.jsx';
-//export Tags from './tags';
-//export ReactStyles from './react-styles.jsx';
-//export TwoWaysToDiffer from './two-ways-to-differ.jsx';
-//export ReactBenefits from './react-benifits.jsx';
-//export FacebookAdsManager from './facebook-ads-manager.jsx';
 //export DemoTime from './demo-time.jsx';
-//export FinalSlide from './final-slide.jsx';

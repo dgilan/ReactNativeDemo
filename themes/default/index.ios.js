@@ -269,6 +269,76 @@ export default assign({}, webTheme, {
                 fontWeight: 'bold',
                 fontFamily: fonts.segoe
             }
+        },
+
+        reactIsAbstract: {
+            row: {
+                flex: 1,
+                flexDirection: 'row',
+                marginBottom: 40
+
+            },
+            column: {
+                flexDirection: 'column',
+                paddingLeft: 5,
+                paddingRight: 5
+            },
+            header: {
+                color: colors.darkPrimary,
+                textAlign: 'center',
+                marginBottom: 10
+            }
+        },
+
+        tags: {
+            root: {
+                marginTop: 0
+            },
+            row: {
+                flex: 1,
+                flexDirection: 'row',
+                //marginBottom: 40
+            },
+            column: {
+                flexDirection: 'column',
+                paddingLeft: 5,
+                paddingRight: 5
+            },
+            header: {
+                color: colors.darkPrimary,
+                textAlign: 'center',
+                marginBottom: 10
+            }
+        },
+        twoWaysToDiffer: {
+            header: {
+                color: colors.light,
+                textAlign: 'center',
+                marginBottom: 10
+            }
+        },
+        reactBenefits: {
+            listItem: {
+                color: colors.darkPrimary
+            },
+            header: {
+                color: colors.darkPrimary,
+                textAlign: 'center'
+            }
+        },
+        facebookAdsManager: {
+            item: {
+                color: colors.darkPrimary
+            },
+            header: {
+                color: colors.darkPrimary,
+                textAlign: 'center'
+            }
+        },
+        finalSlide: {
+            header: {
+                color: colors.light
+            }
         }
     }
 })

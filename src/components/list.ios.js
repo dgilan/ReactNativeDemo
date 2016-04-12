@@ -15,7 +15,7 @@ const List = createClass(extend(BaseComponent, ListBaseComponent, {
         const styles = StyleSheet.create({list, listItem})
 
         const renderRow = (data) => {
-            return <Text style={styles.listItem}>{data}</Text>
+            return <Text style={[styles.listItem, this.props.itemStyle]}>{data}</Text>
         };
 
         return (

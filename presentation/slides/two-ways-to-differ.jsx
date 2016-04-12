@@ -1,11 +1,11 @@
 import React from 'react';
 import { Row, Col } from 'elemental';
 import { Heading, CodePane } from '../../src/spectacle';
-import stepped from '../stepped';
+import stepped from '../../src/utils/stepped';
 import { VelocityComponent } from 'velocity-react';
+import Lang from '../language/two-ways-to-differ'
 
-
-@stepped(3)
+@stepped(React,3)
 export default class TwoWaysToDiffer extends React.Component {
 
   static propTypes = {
@@ -19,7 +19,7 @@ export default class TwoWaysToDiffer extends React.Component {
       <div>
         <Row>
           <Col>
-            <Heading size={4} textColor='light'>Два способа разделять <br />платформозависимую логику</Heading>
+            <Heading size={4} textColor='light'>{Lang.HEADER1} <br />{Lang.HEADER2}</Heading>
           </Col>
         </Row>
         <Row>

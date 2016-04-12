@@ -17,9 +17,6 @@ const images = {
     htmlCssJS: require('./images/html-js-css.png')
 }
 
-//import preloader from '../src/utils/preloader'
-
-//preloader([images.me, images.logo, images.thanks]);
 
 export default [
     // Intro
@@ -32,7 +29,7 @@ export default [
             logo: images.logo
         }
     },
-    // //Why do we love native apps
+     //Why do we love native apps
     {
         component: Slides.WhyDoWeLoveNativeApps,
         slideProps: {
@@ -128,71 +125,83 @@ export default [
             bgColor: '#F9F6ED'
         }
     },
-    //{
-    //    component: Slides.ReactIsAbstract,
-    //    slideProps: {
-    //        bgColor: 'light'
-    //    }
-    //},
-    //{
-    //    component: Slides.ReactIsAbstract2,
-    //    slideProps: {
-    //        bgColor: 'light'
-    //    }
-    //},
-    //{
-    //    component: Slides.NotWriteOnce,
-    //    slideProps: {
-    //        bgColor: 'darkPrimary'
-    //    }
-    //},
-    //{
-    //    component: Slides.LearnOnce,
-    //    slideProps: {
-    //        bgColor: 'darkPrimary'
-    //    }
-    //},
-    //{
-    //    component: Slides.Tags,
-    //    slideProps: {
-    //        bgColor: 'light'
-    //    }
-    //},
-    //{
-    //    component: Slides.ReactStyles,
-    //    slideProps: {
-    //        bgColor: 'light'
-    //    }
-    //},
-    //{
-    //    component: Slides.TwoWaysToDiffer,
-    //    slideProps: {
-    //        bgColor: 'darkPrimary'
-    //    }
-    //},
-    //{
-    //    component: Slides.ReactBenefits,
-    //    slideProps: {
-    //        bgColor: 'light'
-    //    }
-    //},
-    //{
-    //    component: Slides.FacebookAdsManager,
-    //    slideProps: {
-    //        bgColor: 'light'
-    //    }
-    //},
+    {
+        component: Slides.ReactIsAbstract,
+        slideProps: {
+            bgColor: 'light'
+        }
+    },
+    {
+        component: Slides.ReactIsAbstract2,
+        slideProps: {
+            bgColor: 'light'
+        }
+    },
+    {
+        component: Slides.NotWriteOnce,
+        slideProps: {
+            bgColor: 'darkPrimary'
+        }
+    },
+    {
+        component: Slides.LearnOnce,
+        slideProps: {
+            bgColor: 'darkPrimary'
+        }
+    },
+    {
+        component: Slides.Tags,
+        slideProps: {
+            bgColor: 'light'
+        },
+        props: {
+            logo: images.logo
+        }
+    },
+    {
+        component: Slides.ReactStyles,
+        slideProps: {
+            bgColor: 'light'
+        },
+        props: {
+            logo: images.logo
+        }
+    },
+    {
+        component: Slides.TwoWaysToDiffer,
+        slideProps: {
+            bgColor: 'darkPrimary'
+        }
+    },
+    {
+        component: Slides.ReactBenefits,
+        slideProps: {
+            bgColor: 'light'
+        },
+        props: {
+            logo: images.logo
+        }
+    },
+    {
+        component: Slides.FacebookAdsManager,
+        slideProps: {
+            bgColor: 'light'
+        },
+        props: {
+            logo: images.logo
+        }
+    },
     //{
     //    component: Slides.DemoTime,
     //    slideProps: {
     //        bgColor: 'light'
     //    }
     //},
-    //{
-    //    component: Slides.FinalSlide,
-    //    slideProps: {
-    //        bgImage: images.thanks.replace('/', ''),
-    //        bgDarken: 0.6
-    //    }
-    //}
+    {
+        component: Slides.FinalSlide,
+        slideProps: {
+            bgImage: images.thanks,
+            bgDarken: 0.6
+        }
+    }
 ]
