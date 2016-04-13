@@ -18,7 +18,7 @@ export default createClass({
 
         return (
             <View style={common.content}>
-                <Image source={this.props.image} style={{width: 70, height: 70, marginBottom: 40}}/>
+                <Image source={this.props.image} style={{width: 130, height: 130, marginBottom: 40}}/>
                 <Heading size={3} style={styles.header}>{Lang.HEADER_1}</Heading>
                 <Heading size={3} style={styles.header}>{Lang.HEADER_2}</Heading>
             </View>

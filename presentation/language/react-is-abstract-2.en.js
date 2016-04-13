@@ -1,3 +1,3 @@
 export default {
-    PROPS: ['Рендерим', 'в компоненты', 'на мобильной', 'платформе']
+    PROPS: ['Render', 'into components', 'on mobile', 'platform']
 }

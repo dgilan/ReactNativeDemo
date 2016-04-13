@@ -212,7 +212,7 @@ export default assign({}, webTheme, {
             },
             header: {
                 fontSize: 28,
-                lineHeight: 26,
+                lineHeight: 30,
                 color: colors.darkPrimary,
                 fontWeight: '700'
             }
@@ -224,11 +224,12 @@ export default assign({}, webTheme, {
                 //height: Dimensions.get('window').height,
             },
             choice: {
+                flex:1,
                 alignItems: 'center',
                 justifyContent: 'center'
             },
             or: {
-                flex: 1
+                //flex: 1
             },
             header: {
                 color: colors.light,
@@ -246,7 +247,7 @@ export default assign({}, webTheme, {
         },
         bothIsImportant: {
             header: {
-                color: colors.light,
+                color: colors.darkPrimary,
                 lineHeight: 40
             }
         },

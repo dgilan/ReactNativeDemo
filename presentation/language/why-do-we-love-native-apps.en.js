@@ -1,4 +1,4 @@
 export default {
-    HEADER_1: 'Почему нам так нравятся',
-    HEADER_2: 'нативные приложения?'
+    HEADER_1: 'Why do we like',
+    HEADER_2: 'native applications?'
 }

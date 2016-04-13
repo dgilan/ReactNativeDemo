@@ -23,10 +23,10 @@ export default createClass({
 
         return (
             <View style={styles.content}>
-                <View style={styles.center}>
-                    <Heading size={4} style={styles.header}>{Lang.HEADER}</Heading>
-                    <Heading size={4} style={styles.header}>{Lang.DESCRIPTION[0]}</Heading>
-                    <Heading size={4} style={styles.header}>{Lang.DESCRIPTION[1]}</Heading>
+                <View style={[styles.center, {paddingTop: 50}]}>
+                    <Heading size={2} style={styles.header}>{Lang.HEADER}</Heading>
+                    <Heading size={2} style={styles.header}>{Lang.DESCRIPTION[0]}</Heading>
+                    <Heading size={2} style={styles.header}>{Lang.DESCRIPTION[1]}</Heading>
                 </View>
                 <View style={styles.row}>
                     <View style={[styles.column, styles.center]}>

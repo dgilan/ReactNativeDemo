@@ -5,6 +5,7 @@ import { VelocityComponent, VelocityTransitionGroup } from 'velocity-react';
 import stepped from '../../src/utils/stepped'
 import BaseComponent from './common/how-web-solved-problems'
 import extend from '../../src/utils/extend'
+import Lang from '../language/how-web-solved-problems'
 
 const Component = createClass(extend(BaseComponent,{
 
@@ -42,9 +43,9 @@ const Component = createClass(extend(BaseComponent,{
 
         return (
             <List>
-                <ListItem textSize='2.6em' style={{ textDecoration: 'line-through' }}>Разный стек технологий</ListItem>
-                { animationForStep(1, 'Нет переиспользования кода') }
-                { animationForStep(2, 'Билд на каждое изменение') }
+                <ListItem textSize='2.6em' style={{ textDecoration: 'line-through' }}>{Lang.REASONS[0]}</ListItem>
+                { animationForStep(1, Lang.REASONS[1]) }
+                { animationForStep(2, Lang.REASONS[2]) }
             </List>
         );
     },
@@ -65,7 +66,7 @@ const Component = createClass(extend(BaseComponent,{
                     ∞
                 </Heading>
                 <Heading textColor='light' size={2} style={{ fontWeight: '700' }}>
-                    JS библиотек
+                    {Lang.SOLUTIONS.LIBS}
                 </Heading>
             </div>
         );
@@ -73,13 +74,13 @@ const Component = createClass(extend(BaseComponent,{
         const thirdStep = (
             <div style={{ position: 'absolute', top: 0, left: 0, width: '100%' }}>
                 <Heading textColor='light' size={4} style={{ fontWeight: '700' }}>
-                    Изменить
+                    {Lang.SOLUTIONS.HOT.CHANGE}
                 </Heading>
                 <Heading textColor='light' size={1}>
                     ▾
                 </Heading>
                 <Heading textColor='light' size={4} style={{ fontWeight: '700' }}>
-                    Обновить
+                    {Lang.SOLUTIONS.HOT.RELOAD}
                 </Heading>
             </div>
         );
@@ -137,12 +138,12 @@ const Component = createClass(extend(BaseComponent,{
             <div>
                 <Row>
                     <Col xs="1/2">
-                        <Heading {...styles.header}>Native</Heading>
+                        <Heading {...styles.header}>{Lang.HEADERS.NATIVE}</Heading>
                         { this.renderNativeList() }
                     </Col>
                     <Col xs="1/2">
                         <Heading {...styles.lightHeader}>
-                            Web
+                            {Lang.HEADERS.WEB}
                         </Heading>
                         <div style={{ position: 'relative' }}>
                             <div style={{ position: 'absolute', width: '100%' }}>

@@ -4,6 +4,7 @@ import BaseComponent from './common/how-web-solved-problems'
 import extend from '../../src/utils/extend'
 import List from '../../src/components/list'
 import Heading from '../../src/components/heading'
+import Lang from  '../language/how-web-solved-problems.en'
 
 const maxStep = 3
 const Component = createClass(extend(BaseComponent, {
@@ -70,17 +71,16 @@ const Component = createClass(extend(BaseComponent, {
 
         return (
             <View style={styles.half}>
-                <Heading style={styles.header} size={3}>Native</Heading>
+                <Heading style={styles.header} size={3}>{Lang.HEADERS.NATIVE}</Heading>
                 <List style={{marginTop: 20}}>
-                    <Text style={listStyles.listItem}>- <Text style={{textDecorationLine: 'line-through'}}>Разный стек
-                        технологий</Text></Text>
+                    <Text style={listStyles.listItem}>- <Text style={{textDecorationLine: 'line-through'}}>{Lang.REASONS[0]}</Text></Text>
                     <Animated.Text style={[listStyles.listItem, {opacity: this.state.opacity1}]}>- <Text
                         style={styleForStep(1)}>
-                        Нет переиспользования кода</Text>
+                        {Lang.REASONS[1]}</Text>
                     </Animated.Text>
                     <Animated.Text style={[listStyles.listItem, {opacity: this.state.opacity2}]}>- <Text
                         style={styleForStep(2)}>
-                        Билд на каждое изменение</Text>
+                        {Lang.REASONS[2]}</Text>
                     </Animated.Text>
                 </List>
             </View>
@@ -91,7 +91,7 @@ const Component = createClass(extend(BaseComponent, {
         const { step } = this.props;
         const styles = StyleSheet.create(this.context.styles.slides.howWebSolvedProblems)
         const centerStyles = StyleSheet.create({center: this.context.styles.center})
-        const styleForStep = (index)=> {
+        const styleForStep = ()=> {
             return [centerStyles.center]
         }
 
@@ -107,7 +107,7 @@ const Component = createClass(extend(BaseComponent, {
                     ∞
                 </Heading>
                 <Heading size={2} style={styles.listItem}>
-                    JS библиотек
+                    {Lang.SOLUTIONS.LIBS}
                 </Heading>
             </View>
         );
@@ -115,20 +115,20 @@ const Component = createClass(extend(BaseComponent, {
         const thirdStep = (
             <View style={styleForStep(2)}>
                 <Heading size={4} style={styles.listItem}>
-                    Изменить
+                    {Lang.SOLUTIONS.HOT.CHANGE}
                 </Heading>
                 <Heading size={1} style={styles.listItem}>
                     ▾
                 </Heading>
                 <Heading size={4} style={styles.listItem}>
-                    Обновить
+                    {Lang.SOLUTIONS.HOT.RELOAD}
                 </Heading>
             </View>
         );
 
         return (
             <View style={[styles.half]}>
-                <Heading style={[styles.header, styles.lightHeader]} size={3}>Web</Heading>
+                <Heading style={[styles.header, styles.lightHeader]} size={3}>{Lang.HEADERS.WEB}</Heading>
                 <View style={{flex: 1, alignItems: 'center'}}>
                     {step === 0 ? firstStep : null}
                     {step === 1 ? secondStep : null}

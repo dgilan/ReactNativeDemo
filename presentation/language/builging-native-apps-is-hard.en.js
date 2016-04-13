@@ -1,4 +1,4 @@
 export default {
-    HEADER: 'Ho...',
-    DESCRIPTION: '..cоздание нативных приложений это сложно'
+    HEADER: 'But...',
+    DESCRIPTION: '..building native applications is complicated'
 }

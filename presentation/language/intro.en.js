@@ -1,4 +1,4 @@
 export default {
     HEADER: 'React Native',
-    DESCRIPTION: 'Создаем нативные приложения для iOS и Android'
+    DESCRIPTION: 'Creating native applications for iOS and Android'
 }

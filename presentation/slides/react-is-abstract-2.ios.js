@@ -22,7 +22,7 @@ export default createClass({
         const width = Dimensions.get('window').width / 2 - 10
 
         const headers = Lang.PROPS.map((item, index)=> {
-            return <Heading size={4} style={styles.header} key={index}>{item}</Heading>
+            return <Heading size={3} style={styles.header} key={index}>{item}</Heading>
         })
 
         return (

@@ -1,4 +1,4 @@
 export default {
-    HEADER1: 'Два способа разделять',
-    HEADER2: 'платформозависимую логику'
+    HEADER1: 'Two ways to separate',
+    HEADER2: 'platform specific logic'
 }

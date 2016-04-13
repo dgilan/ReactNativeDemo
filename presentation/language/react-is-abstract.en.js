@@ -1,4 +1,4 @@
 export default {
-    HEADER: 'React - это',
-    DESCRIPTION: ['отличная', 'абстракция']
+    HEADER: 'React is',
+    DESCRIPTION: ['perfect', 'abstraction']
 }

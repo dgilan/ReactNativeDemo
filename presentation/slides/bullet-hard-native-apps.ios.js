@@ -2,7 +2,7 @@ import React, { createClass, View, Text, Animated, PropTypes, StyleSheet, Dimens
 import LinearGradient from 'react-native-linear-gradient'
 import stepped from '../../src/utils/stepped'
 import extend from '../../src/utils/extend'
-import Lang from '../language/bullet-love-native-apps.en'
+import Lang from '../language/bullet-hard-native-apps.en'
 import BaseComponent from './common/builging-native-apps-is-hard'
 import Heading from '../../src/components/heading'
 import List from '../../src/components/list'
@@ -85,10 +85,10 @@ const Component = createClass(extend(BaseComponent, {
         return (
             <View>
                 <List>
-                    <Animated.Text style={[style, {opacity: this.state.opacity1}]}> - Разный стек технологий</Animated.Text>
+                    <Animated.Text style={[style, {opacity: this.state.opacity1}]}> - {Lang.REASONS[0]}</Animated.Text>
                     {this.renderImage()}
-                    <Animated.Text style={[style, {opacity: this.state.opacity2}]}> - Нет переиспользования кода</Animated.Text>
-                    <Animated.Text style={[style, {opacity: this.state.opacity3}]}> - Билд на каждое изменение</Animated.Text>
+                    <Animated.Text style={[style, {opacity: this.state.opacity2}]}> - {Lang.REASONS[1]}</Animated.Text>
+                    <Animated.Text style={[style, {opacity: this.state.opacity3}]}> - {Lang.REASONS[2]}</Animated.Text>
                 </List>
             </View>
         )
@@ -101,7 +101,7 @@ const Component = createClass(extend(BaseComponent, {
 
         return (
             <View style={commonStyle.content}>
-                <Heading size={3} style={slideStyle.header}>Почему это сложно?</Heading>
+                <Heading size={3} style={slideStyle.header}>{Lang.HEADER}</Heading>
                 <View>
                     {this.renderList()}
                 </View>

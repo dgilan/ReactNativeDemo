@@ -26,7 +26,7 @@ export default createClass({
         ))
 
         const content = Lang.PROPS.map((item, index)=> {
-            return <Heading size={4} key={index} style={styles.header}>{item.toUpperCase()}</Heading>
+            return <Heading size={4} key={index} style={styles.header}>{item}</Heading>
         })
 
         return (

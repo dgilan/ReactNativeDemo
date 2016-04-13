@@ -1,3 +1,3 @@
 export default {
-    PROPS: ['это', 'одинаково', 'важно']
+    PROPS: ['These are ', 'equally', 'important']
 }

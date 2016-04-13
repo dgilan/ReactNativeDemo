@@ -3,13 +3,11 @@ import { VelocityComponent } from 'velocity-react'
 import { List, ListItem, Heading, Image } from '../../src/spectacle';
 import { Row, Col } from 'elemental';
 import extend from '../../src/utils/extend'
-import Lang from '../language/bullet-love-native-apps.en'
 import BaseComponent from './common/bullet-hard-native-apps'
 import stepped from '../../src/utils/stepped'
+import Lang from '../language/bullet-hard-native-apps'
 
 const Component = createClass(extend(BaseComponent, {
-
-
     renderList() {
         const { step } = this.props;
 
@@ -28,7 +26,7 @@ const Component = createClass(extend(BaseComponent, {
             }())
           }}
                     duration={500}>
-                    <ListItem>Разный стек технологий</ListItem>
+                    <ListItem>{Lang.REASONS[0]}</ListItem>
                 </VelocityComponent>
                 <VelocityComponent
                     animation={{
@@ -43,7 +41,7 @@ const Component = createClass(extend(BaseComponent, {
             }())
           }}
                     duration={500}>
-                    <ListItem>Нет переиспользования кода</ListItem>
+                    <ListItem>{Lang.REASONS[1]}</ListItem>
                 </VelocityComponent>
                 <VelocityComponent
                     animation={{
@@ -58,7 +56,7 @@ const Component = createClass(extend(BaseComponent, {
             }())
           }}
                     duration={500}>
-                    <ListItem>Билд на каждое изменение</ListItem>
+                    <ListItem>{Lang.REASONS[2]}</ListItem>
                 </VelocityComponent>
             </List>
         );
@@ -91,7 +89,7 @@ const Component = createClass(extend(BaseComponent, {
             <div>
                 <Row>
                     <Col>
-                        <Heading size={3} textColor="darkPrimary" style={styles.heading}>Почему это сложно?</Heading>
+                        <Heading size={3} textColor="darkPrimary" style={styles.heading}>{Lang.HEADER}</Heading>
                     </Col>
                 </Row>
                 <Row style={styles.row}>
