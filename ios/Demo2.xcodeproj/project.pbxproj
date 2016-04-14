@@ -21,6 +21,14 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		484E8DCD1CBFA83700EC88A5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484E8DCC1CBFA83700EC88A5 /* CoreMedia.framework */; };
+		484E8DCF1CBFA84200EC88A5 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484E8DCE1CBFA84200EC88A5 /* CoreMotion.framework */; };
+		484E8DD11CBFA84F00EC88A5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484E8DD01CBFA84F00EC88A5 /* AVFoundation.framework */; };
+		484E8DD31CBFA86300EC88A5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484E8DD21CBFA86300EC88A5 /* SystemConfiguration.framework */; };
+		484E8DD51CBFA87400EC88A5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484E8DD41CBFA87400EC88A5 /* OpenGLES.framework */; };
+		484E8DFF1CBFB8E100EC88A5 /* libTestFairy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 484E8DFA1CBFB8E100EC88A5 /* libTestFairy.a */; };
+		484E8E001CBFB8E100EC88A5 /* RCTTestFairyBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 484E8DFC1CBFB8E100EC88A5 /* RCTTestFairyBridge.m */; };
+		484E8E011CBFB8E100EC88A5 /* upload-dsym.sh in Resources */ = {isa = PBXBuildFile; fileRef = 484E8DFE1CBFB8E100EC88A5 /* upload-dsym.sh */; };
 		487B1E491CBD073200704FF8 /* SegoeUILight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 487B1E481CBD073200704FF8 /* SegoeUILight.ttf */; };
 		487B1E5A1CBD087400704FF8 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 487B1E591CBD084400704FF8 /* libBVLinearGradient.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -133,6 +141,16 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Demo2/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Demo2/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		484E8DCC1CBFA83700EC88A5 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		484E8DCE1CBFA84200EC88A5 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		484E8DD01CBFA84F00EC88A5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		484E8DD21CBFA86300EC88A5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		484E8DD41CBFA87400EC88A5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		484E8DFA1CBFB8E100EC88A5 /* libTestFairy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFairy.a; sourceTree = "<group>"; };
+		484E8DFB1CBFB8E100EC88A5 /* RCTTestFairyBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTTestFairyBridge.h; sourceTree = "<group>"; };
+		484E8DFC1CBFB8E100EC88A5 /* RCTTestFairyBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTTestFairyBridge.m; sourceTree = "<group>"; };
+		484E8DFD1CBFB8E100EC88A5 /* TestFairy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFairy.h; sourceTree = "<group>"; };
+		484E8DFE1CBFB8E100EC88A5 /* upload-dsym.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "upload-dsym.sh"; sourceTree = "<group>"; };
 		487B1E481CBD073200704FF8 /* SegoeUILight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SegoeUILight.ttf; sourceTree = "<group>"; };
 		487B1E541CBD084400704FF8 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -151,6 +169,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				484E8DCD1CBFA83700EC88A5 /* CoreMedia.framework in Frameworks */,
+				484E8DCF1CBFA84200EC88A5 /* CoreMotion.framework in Frameworks */,
+				484E8DD11CBFA84F00EC88A5 /* AVFoundation.framework in Frameworks */,
+				484E8DD31CBFA86300EC88A5 /* SystemConfiguration.framework in Frameworks */,
+				484E8DD51CBFA87400EC88A5 /* OpenGLES.framework in Frameworks */,
 				487B1E5A1CBD087400704FF8 /* libBVLinearGradient.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -162,6 +185,7 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				484E8DFF1CBFB8E100EC88A5 /* libTestFairy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +306,11 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				484E8DFA1CBFB8E100EC88A5 /* libTestFairy.a */,
+				484E8DFB1CBFB8E100EC88A5 /* RCTTestFairyBridge.h */,
+				484E8DFC1CBFB8E100EC88A5 /* RCTTestFairyBridge.m */,
+				484E8DFD1CBFB8E100EC88A5 /* TestFairy.h */,
+				484E8DFE1CBFB8E100EC88A5 /* upload-dsym.sh */,
 				487B1E541CBD084400704FF8 /* BVLinearGradient.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -308,6 +337,11 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				484E8DD41CBFA87400EC88A5 /* OpenGLES.framework */,
+				484E8DD21CBFA86300EC88A5 /* SystemConfiguration.framework */,
+				484E8DD01CBFA84F00EC88A5 /* AVFoundation.framework */,
+				484E8DCE1CBFA84200EC88A5 /* CoreMotion.framework */,
+				484E8DCC1CBFA83700EC88A5 /* CoreMedia.framework */,
 				487B1E481CBD073200704FF8 /* SegoeUILight.ttf */,
 				13B07FAE1A68108700A75B9A /* Demo2 */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -378,6 +412,9 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 6NWBC2NQ7C;
 					};
 				};
 			};
@@ -540,6 +577,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				484E8E011CBFB8E100EC88A5 /* upload-dsym.sh in Resources */,
 				487B1E491CBD073200704FF8 /* SegoeUILight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,6 +616,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				484E8E001CBFB8E100EC88A5 /* RCTTestFairyBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,15 +684,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../node_modules/react-native-testfairy/ios/**",
 				);
 				INFOPLIST_FILE = Demo2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ios",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.Demo2;
 				PRODUCT_NAME = Demo2;
 			};
 			name = Debug;
@@ -662,14 +710,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../node_modules/react-native/React/**",
+					"$(SRCROOT)/../node_modules/react-native-testfairy/ios/**",
 				);
 				INFOPLIST_FILE = Demo2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ios",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.Demo2;
 				PRODUCT_NAME = Demo2;
 			};
 			name = Release;
