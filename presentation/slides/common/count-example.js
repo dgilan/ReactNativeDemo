@@ -7,13 +7,14 @@ export default {
 
     getInitialState(){
         return {
-            count: 1
+            count: 1,
+            text: "1"
         }
     },
 
     onClick() {
         this.setState({
-            count: this.state.count + 1
+            count: this.state.count + (Number(this.state.text) || 1)
         });
     }
 

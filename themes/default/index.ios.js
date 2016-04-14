@@ -224,7 +224,7 @@ export default assign({}, webTheme, {
                 //height: Dimensions.get('window').height,
             },
             choice: {
-                flex:1,
+                flex: 1,
                 alignItems: 'center',
                 justifyContent: 'center'
             },
@@ -269,7 +269,25 @@ export default assign({}, webTheme, {
                 lineHeight: 50,
                 fontWeight: 'bold',
                 fontFamily: fonts.segoe
+            },
+            input: {
+                backgroundColor: colors.light,
+                height: 45,
+                width: 30,
+                borderRadius: 5,
+                padding: 3,
+                fontSize: 24,
+                lineHeight: 24,
+                color: colors.darkPrimary,
+                fontWeight: 'bold',
+                fontFamily: 'Arial'
+            },
+
+            error: {
+                borderColor: 'red',
+                borderWidth: 1
             }
+
         },
 
         reactIsAbstract: {
