@@ -3,7 +3,7 @@ import { Row, Col } from 'elemental';
 import { Image, Text } from '../../src/spectacle';
 import Lang from '../language/react-styles'
 
-const image = require('../images/flexbox.jpg');
+const image = require('../images/flexbox.jpg').replace('/','');
 
 export default class ReactStyles extends React.Component {
 

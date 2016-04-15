@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col } from 'elemental';
 import { Image } from '../../src/spectacle';
 
-const image = require('../images/learn-once.jpg');
+const image = require('../images/learn-once.jpg').replace('/','');
 
 export default class LearnOnce extends React.Component {
 

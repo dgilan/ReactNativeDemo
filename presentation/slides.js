@@ -17,6 +17,13 @@ const images = {
     htmlCssJS: require('./images/html-js-css.png')
 }
 
+const isProd = process && process.env && process.env.NODE_ENV === 'production'
+
+
+const getImage = (key)=> {
+    return isProd ? images[key].replace('/', '') : images[key]
+}
+
 
 export default [
     // Intro
@@ -26,17 +33,17 @@ export default [
             bgColor: 'primary'
         },
         props: {
-            logo: images.logo
+            logo: getImage('logo')
         }
     },
-     //Why do we love native apps
+    //Why do we love native apps
     {
         component: Slides.WhyDoWeLoveNativeApps,
         slideProps: {
             bgColor: 'light',
         },
         props: {
-            like: images.like
+            like: getImage('like')
         }
     },
     // Native Apps Bullet
@@ -46,13 +53,13 @@ export default [
             bgColor: 'light'
         },
         props: {
-            image: images.nativeApps
+            image: getImage('nativeApps')
         }
     },
     {
         component: Slides.BuildingNativeAppsIsHard,
         slideProps: {
-            bgImage: images.buildingNativeApps,
+            bgImage: getImage('buildingNativeApps'),
             bgDarken: 0.7
         }
     },
@@ -62,7 +69,7 @@ export default [
             bgColor: 'light'
         },
         props: {
-            image: images.phones
+            image: getImage('phones')
         }
     },
     {
@@ -71,17 +78,17 @@ export default [
             bgColor: 'darkPrimary'
         },
         props: {
-            image: images.webHero
+            image: getImage('webHero')
         }
     },
     {
         component: Slides.HowWebSolvedTheProblems,
         slideProps: {
-            bgImage: images.splitBackground,
-            bgImageIos: images.splitBackgroundHorizontal
+            bgImage: getImage('splitBackground'),
+            bgImageIos: getImage('splitBackgroundHorizontal')
         },
         props: {
-            image: images.htmlCssJS
+            image: getImage('htmlCssJS')
         }
     },
     {
@@ -104,7 +111,7 @@ export default [
     },
     {
         slideProps: {
-            bgImage: images.reactNativeBackground
+            bgImage: getImage('reactNativeBackground')
         }
     },
     {
@@ -155,7 +162,7 @@ export default [
             bgColor: 'light'
         },
         props: {
-            logo: images.logo
+            logo: getImage('logo')
         }
     },
     {
@@ -164,7 +171,7 @@ export default [
             bgColor: 'light'
         },
         props: {
-            logo: images.logo
+            logo: getImage('logo')
         }
     },
     {
@@ -179,7 +186,7 @@ export default [
             bgColor: 'light'
         },
         props: {
-            logo: images.logo
+            logo: getImage('logo')
         }
     },
     {
@@ -188,7 +195,7 @@ export default [
             bgColor: 'light'
         },
         props: {
-            logo: images.logo
+            logo: getImage('logo')
         }
     },
     //{
@@ -200,7 +207,7 @@ export default [
     {
         component: Slides.FinalSlide,
         slideProps: {
-            bgImage: images.thanks,
+            bgImage: getImage('thanks'),
             bgDarken: 0.6
         }
     }

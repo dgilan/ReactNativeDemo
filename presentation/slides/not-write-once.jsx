@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col } from 'elemental';
 import { Image } from '../../src/spectacle';
 
-const image = require('../images/not-write-once.jpg');
+const image = require('../images/not-write-once.jpg').replace('/','');
 
 export default class NotWriteOnce extends React.Component {
 

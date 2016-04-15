@@ -3,8 +3,8 @@ import { Row, Col } from 'elemental';
 import { Image, Heading } from '../../src/spectacle';
 import Lang from '../language/react-is-abstract-2'
 
-const image1 = require('../images/react-is-abstract-2_1.jpg');
-const image2 = require('../images/react-is-abstract-2_2.jpg');
+const image1 = require('../images/react-is-abstract-2_1.jpg').replace('/','');
+const image2 = require('../images/react-is-abstract-2_2.jpg').replace('/','');
 
 export default class ReactIsAbstract2 extends React.Component {
 

@@ -3,7 +3,7 @@ import { Row, Col } from 'elemental';
 import { Image, Text } from '../../src/spectacle';
 import Lang from '../language/tags'
 
-const image = require('../images/tags_1.jpg')
+const image = require('../images/tags_1.jpg').replace('/','')
 
 export default class Tags extends React.Component {
 

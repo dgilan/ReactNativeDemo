@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col } from 'elemental';
 import { Image } from '../../src/spectacle';
 
-const image = require('../images/react-is-a-framework.png');
+const image = require('../images/react-is-a-framework.png').replace('/', '');
 
 export default class ReactJSFramework extends React.Component {
 

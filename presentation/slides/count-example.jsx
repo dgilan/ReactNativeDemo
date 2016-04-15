@@ -5,7 +5,7 @@ import { RaisedButton } from 'material-ui'
 import extend from '../../src/utils/extend'
 import BaseComponent from './common/count-example'
 
-const image = require('../images/react-logo.png')
+const image = require('../images/react-logo.png').replace('/','')
 
 export default createClass(extend(BaseComponent, {
     render(){
