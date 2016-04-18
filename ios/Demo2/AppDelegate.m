@@ -43,19 +43,6 @@
 
    jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
   
-  
-  /**
-   * Show all fonts
-   */
-  for (NSString* family in [UIFont familyNames])
-  {
-    NSLog(@"%@", family);
-    for (NSString* name in [UIFont fontNamesForFamilyName: family])
-    {
-      NSLog(@" %@", name);
-    }
-  }
-
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"Demo2"
                                                initialProperties:nil

@@ -247,8 +247,8 @@ export default assign({}, webTheme, {
         },
         bothIsImportant: {
             header: {
-                color: colors.darkPrimary,
-                lineHeight: 40
+                color: colors.light,
+                //lineHeight: 40
             }
         },
         countExample: {
