@@ -21,7 +21,7 @@ const isProd = process && process.env && process.env.NODE_ENV === 'production'
 
 
 const getImage = (key)=> {
-    return isProd ? images[key].replace('/', '') : images[key]
+    return isProd && (typeof images[key] === 'string') ? images[key].replace('/', '') : images[key]
 }
 
 
